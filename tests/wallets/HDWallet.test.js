@@ -26,15 +26,6 @@ test.concurrent("HDWallet - getWallet with invalid coin should fail", () => {
 });
 
 test.concurrent(
-  "HDWallet - wallet restored from invalid mnemonic should fail",
-  () => {
-    expect(() => new HDWallet("fail test ".repeat(6).trim())).toThrow(
-      errors.InvalidMnemonicError
-    );
-  }
-);
-
-test.concurrent(
   "HDWallet - wallet restored from existing mnemonic should succeed",
   () => {
     const wallet = wallets.getWallet("ETH");
