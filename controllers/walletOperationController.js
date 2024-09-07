@@ -5,8 +5,13 @@ const sendTransaction = async (req, res, next) => {
   try {
     const { coinType, to, amount } = req.body;
     const wallet = wallets.getWallet(coinType);
-    const transactionResult = await wallet.sendTransaction(to, amount);
-    res.status(200).json({ result: transactionResult });
+    let transactionResult = await wallet.sendTransaction(to, amount);
+    // Wait for the transaction to be mined
+    const receipt = await transactionResult.wait();
+    transactionResult.blockNumber = receipt.blockNumber;
+    transactionResult.blockHash = receipt.blockHash;
+    transactionResult.gasPrice = receipt.gasPrice;
+    res.status(200).json({ TransactionResponse: transactionResult });
   } catch (error) {
     next(error);
   }

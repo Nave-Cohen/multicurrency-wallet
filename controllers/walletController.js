@@ -47,6 +47,7 @@ const restoreWallet = (req, res, next) => {
     if (!mTools.isValidMnemonic(mnemonic)) {
       next(new errors.InvalidMnemonicError(mnemonic));
     }
+    const wallet = new HDWallet(mnemonic);
     req.session.mnemonic = mnemonic;
     req.session.address = wallet.getWallet("ETH").address;
     res.status(200).json({

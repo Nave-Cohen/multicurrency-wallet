@@ -1,0 +1,155 @@
+#next-btn,
+#create-btn,
+#restore-btn,
+#send-btn,
+#back-btn,
+#dashboard-btn,
+#logout-btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+
+/* Consistent container width for all pages */
+.container {
+  max-width: 600px !important;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Create Wallet Page */
+#create-title {
+  color: #343a40;
+  font-weight: bold;
+}
+
+#mnemonic-message {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+#mnemonic-container {
+  background-color: #fff3cd;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Restore Wallet Page */
+#restore-title,
+#restore-message {
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Wallet Page */
+#wallet-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-message {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#wallet-address {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+#balance-display {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#balance {
+  font-size: 2.5rem;
+  color: #007bff;
+  font-weight: 700;
+}
+
+#coin-select {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+#make-transaction-btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#make-transaction-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Send Transaction Page */
+#send-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#send-form .form-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+#send-form .form-control {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+#error-message {
+  display: none;
+}
+
+#mnemonic-input-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#pasteBtn {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+#spinner-container {
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+#loading-text {
+  margin-top: 10px;
+  font-size: 16px;
+}
