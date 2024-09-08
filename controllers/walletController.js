@@ -6,6 +6,7 @@ const errors = require("../errors/errors");
 const jwt = require("../middleware/wallet");
 
 // Generate a new mnemonic and send it to the client
+
 const generateMnemonicRoute = (req, res, next) => {
   try {
     const mnemonic = mTools.generateMnemonic();
@@ -58,9 +59,22 @@ const restoreWallet = (req, res, next) => {
     next(error);
   }
 };
+const logout = (req, res, next) => {
+  req.session.destroy((err) => {
+    if (err) {
+      // Handle error if session destruction fails
+      return next(err);
+    }
+    // Optional: Clear the cookie in the client-side
+    res.clearCookie("connect.sid"); // Assumes you're using the default session cookie name
 
+    // Send a response to the client
+    return res.status(200).end();
+  });
+};
 module.exports = {
   generateMnemonicRoute,
   createWallet,
   restoreWallet,
+  logout,
 };

@@ -64,6 +64,7 @@ function showTransactionDetails(transactionResponse) {
   document.getElementById("max-priority-fee").innerText =
     maxPriorityFeePerGasGwei.toFixed(9);
   document.getElementById("burnt-fee").innerText = burntFeePol.toFixed(15);
+  sessionStorage.clear();
 }
 function backClicked() {
   window.location.href = "send-transaction.html"; // Redirect back to the wallet page
