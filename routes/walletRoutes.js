@@ -11,4 +11,5 @@ router.post("/create", walletController.createWallet);
 // Route to restore an existing wallet
 router.post("/restore", walletController.restoreWallet);
 
+router.post("/logout", walletController.logout);
 module.exports = router;
