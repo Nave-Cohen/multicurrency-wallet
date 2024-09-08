@@ -1,0 +1,1 @@
+[![multicurrency-wallet CI](https://github.com/Nave-Cohen/multicurrency-wallet/actions/workflows/node.js.yml/badge.svg)](https://github.com/Nave-Cohen/multicurrency-wallet/actions/workflows/node.js.yml)
